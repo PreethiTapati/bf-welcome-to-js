@@ -16,19 +16,22 @@
 
   --- experiments ---
 
-  1. FAILING:
-      EXPECT:
-      ACTUAL:
+  1. FAILING:hello
+      EXPECT:"hello" is not excited
+      ACTUAL:"hello" is excited
 
-    TRY:
-    PREDICT:
-    IT DID:
-    EXPLAIN:
+    TRY: change !== to === in first if statment
+    PREDICT:we should get get correct output
+    IT DID: got correct output
+    EXPLAIN: change logic 
 
   --- lessons learned ---
+It's good to think over a logic during writing a program
+think with calm thoughts and reviewthe logic of the code during writing a program
 
 
 */
+
 
 let input = null;
 while (!input) {
