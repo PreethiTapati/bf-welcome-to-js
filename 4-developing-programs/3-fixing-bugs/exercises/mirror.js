@@ -16,19 +16,19 @@
 
   --- experiments ---
 
-  1. FAILING:
-      EXPECT:
-      ACTUAL:
+  1. FAILING: a
+      EXPECT: a|a
+      ACTUAL: |a|
 
-    TRY:
-    PREDICT:
-    IT DID:
-    EXPLAIN:
+    TRY:changing  the order of variables in line 40: mirrored = character + mirrored + character;
+    PREDICT: should be correct output
+    IT DID: got correct output
+    EXPLAIN: incorrect order gives incorrect output
 
   --- lessons learned ---
-
-
+We need to be carefull with the order of variables at the concatination
 */
+
 
 let text = null;
 while (text === null) {
