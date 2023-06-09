@@ -13,20 +13,21 @@
     '!.-.!' -> '"!.-.!" has no vowels'
     'aeiou' -> '"aeiou" has at least one vowel'
     'hi' -> '"hi" has at least one vowel'
+    
+ --- experiments ---
 
-  --- experiments ---
+  1. FAILING:'', 'xyz'
+      EXPECT:"" has no vowels
+      ACTUAL:"" has at least one vowel
 
-  1. FAILING:
-      EXPECT:
-      ACTUAL:
-
-    TRY:
-    PREDICT:
-    IT DID:
-    EXPLAIN:
+    TRY: change value of let hasAVowel = false; and reassign it to  hasAVowel = true  so that it will be true in first if condition
+    PREDICT: got correct output for ''
+    IT DID: got correct output for ''
+    EXPLAIN: it did  changed the logic to correct
 
   --- lessons learned ---
-
+  
+  think and try to use some logic before starting to write a code or program.
 
 */
 
