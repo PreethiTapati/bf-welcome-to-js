@@ -1,3 +1,5 @@
+// #todo
+
 'use strict';
 
 /* favorite color
@@ -14,37 +16,51 @@
 
   --- experiments ---
 
-  1. FAILING:
-      EXPECT:
-      ACTUAL:
+  1. FAILING:cancel
+      EXPECT:prompt
+      ACTUAL:error
 
-    TRY:
-    PREDICT:
-    IT DID:
-    EXPLAIN:
+    TRY: condition if
+    PREDICT: get rid of the error
+    IT DID: didn't exit the loop with cancel  got incorrect output
+    EXPLAIN: in this case we didn't read length of null 
+
+  2. FAILING:'' (empty string)
+      EXPECT:prompt
+      ACTUAL:"
+
+    TRY:change execution if input.length === 0 to continue, add else and put previous execution in this else
+    PREDICT: it doesn't exit the loop with ''
+    IT DID: didn't exit the loop with '' , got incorrect output
+    EXPLAIN: continue return in loop 
+
+  3. FAILING:' '
+      EXPECT:you entered " "
+      ACTUAL:"
+
+    TRY:change value of mariable message to correct output: message + input + '"';
+    PREDICT: we get correct output
+    IT DID: we get correct output
+    EXPLAIN: it was not correct concatination
 
   --- lessons learned ---
-
+don't  combine conditions with different data types.
 
 */
 
-let characters = null;
-while (characters === null) {
-characters = prompt('Enter some characters');
+let message = 'you entered "';
+
+while (true) {
+  const input = prompt('enter something');
+
+  if (input === null) {
+    continue;
+  } if (input.length === 0) {
+    continue;
+  } else {
+    message = message + input + '"';
+    break;
+  }
 }
 
-const vowels = 'aeiouAEIOU';
-
-let hasAVowel = false;
-for (const char of characters) {
-if (vowels.includes(char)) {
-hasAVowel = true;
-break;
-}
-}
-
-if (hasAVowel) {
-alert('"' + characters + '" has at least one vowel');
-} else {
-alert('"' + characters + '" has no vowels');
-}
+alert(message);
