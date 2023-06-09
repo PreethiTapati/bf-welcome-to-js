@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /*
@@ -19,7 +17,11 @@ let noRepetitions = '';
 for (const next of phrase) {
   if (next !== previous) {
     noRepetitions = noRepetitions + next;
+
+     console.log(next); // log every character added to the final string
+
      console.log('Character added:', next);
+
   }
   previous = next;
 }

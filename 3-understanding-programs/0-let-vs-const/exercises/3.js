@@ -18,6 +18,31 @@ console.log('-- begin --');
 
 */
 
+// declare a variable named furniture and assign it the value 'chair'
+let furniture = 'chair';
+console.log(furniture); // Output: chair
+
+// declare a variable named building and assign it the value 'house'
+const building = 'house';
+console.log(building); // Output: house
+
+furniture = 'table';
+console.log(furniture); // Output: table
+
+// declare a variable named food without assigning a value
+let food;
+console.log(food); // Output: undefined
+
+food = 'apple';
+console.log(food); // Output: apple
+
+console.log(building); // Output: house
+
+console.log(furniture); // Output: table
+
+food = 'pear';
+console.log(food); // Output: pear
+=======
 const furniture ='chair';
 console.log(furniture); // should log 'chair'
 
@@ -39,5 +64,6 @@ console.log(furniture); // should log 'table'
 
  food +=', pear';
 console.log(_); // should log 'apple, pear'
+
 
 console.log('-- end --');
